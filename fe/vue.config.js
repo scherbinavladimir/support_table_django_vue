@@ -5,4 +5,5 @@ module.exports = defineConfig({
     allowedHosts: 'all',
     proxy: process.env.VUE_APP_PROXY_BASE_URL,
   },
+  assetsDir: 'static'
 })

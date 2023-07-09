@@ -2,7 +2,7 @@
 node_modules
 /dist
 
-/be/static
+#/be/static
 /be/media
 *.sqlite3
 .env

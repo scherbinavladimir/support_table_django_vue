@@ -25,6 +25,7 @@ watchEffect(()=>{
   <div @click="show=!show" class="searchBtn text-nowrap fs-14"><span><slot></slot></span>
   </div>
   <div class="searchPopup" v-if="show">
+
     <input
       ref="searchInput"
       type="text"
@@ -54,9 +55,8 @@ watchEffect(()=>{
   border: 1px lightgrey solid;
   top: 45px;
   right: 0;
-  height: 40px;
-  width: 250px;
-  display: flex;
+  left: 0;
+  height: 35px;
 }
 .searchPopup input{
   flex-grow: 1;
@@ -64,9 +64,13 @@ watchEffect(()=>{
   margin-left: 0.5rem;
 }
 .searchPopup > div{
-  height: 100%;
+  position: absolute;
+  /*top: 45px;*/
+  right: 0;
+  top: 0;
+  height: 33px;
   border-radius: var(--border-radius);
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   background-color: black;
   color: white;
 }
