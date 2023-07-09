@@ -6,3 +6,6 @@ router = routers.SimpleRouter()
 router.register('support_request', SupportRequestViewSet)
 
 urlpatterns = router.urls
+
+urlpatterns += [
+]

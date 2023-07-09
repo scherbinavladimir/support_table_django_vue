@@ -14,13 +14,13 @@ class SupportRequest(models.Model):
     REJECTED = 'rjct'
     CLOSED = 'clsd'
     STATUSES = [
-        (NEW, 'Новая'),
-        (IN_WORK, 'В работе'),
-        (REJECTED, 'Отклонена'),
-        (CLOSED, 'Закрыта'),
+        (NEW, 'Открытая'),
+        (IN_WORK, 'Ожидает подтверждения'),
+        (REJECTED, 'Неоценённая'),
+        (CLOSED, 'Закрытая'),
     ]
 
-    number = models.CharField('номер', max_length=12, unique=True, db_index=True)
+    number = models.CharField('№ заявки', max_length=12, unique=True, db_index=True)
     created_at = models.DateTimeField('добавлено', auto_now_add=True)
     short_description = models.CharField('краткое описание', max_length=255)
     author = models.CharField('заявитель', max_length=255)

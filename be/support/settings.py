@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%st#94y*@4hoqlw79+5mgx1d3w%b!k*j$k-22ur*8%%00^(_fe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -125,7 +125,11 @@ REST_FRAMEWORK = {
     # 'DEFAULT_AUTHENTICATION_CLASSES': [
     #     'rest_framework.authentication.TokenAuthentication',
     # ],
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    # 'DEFAULT_FILTER_BACKENDS': [
+    #     'django_filters.rest_framework.DjangoFilterBackend',
+    #     'rest_framework.filters.OrderingFilter',
+    #     'rest_framework.filters.SearchFilter',
+    # ],
 }
 
 # Static files (CSS, JavaScript, Images)
